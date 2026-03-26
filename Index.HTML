@@ -19,20 +19,20 @@
 .card {
     max-width: 500px;
     width: 100%;
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    align-content: center;
+    background-color: rgba(111, 109, 126, 0);
+    border-radius: 50px;
 }
 
 body{
-  background-image: url('');
+  background-image: url('https://img.freepik.com/premium-vector/geometric-gradient-technology-background_23-2149110132.jpg?semt=ais_hybrid&w=740&q=80');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.card{
-  padding: 20px;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  align-content: center;
-}
 
 
 
@@ -77,11 +77,10 @@ body{
         </div>
         </div>
         
-  <div id="btngood">
-	<button type="btn btn-info" id="submit" name="submit" class="btn btn-primary" onclick="checkftype()">Login
+  <div id="btngood" class="mb-1">
+	<button type="button" id="submit" name="submit" class="btn btn-primary" onclick="checkftype()">Login</button>
   <button type="button" id="cancelform" class="btn btn-light">Cancel</button>
   </div>
-	</button>
   </div>
   </div>
 
@@ -102,18 +101,19 @@ body{
     function checkftype(){
         var fuse = document.getElementById("fuse").value;
         var  fpass = document.getElementById("fpass").value;
-        var check = fuse + fpass;
+        
 
         
-            if (check === Johndoez && check === Doughestofthejohns) {
+            if (fuse === "Johndoez" && fpass === "Doughestofthejohns") {
                 alert("Successfully logged in! Welcome back Johndoez!");
             }
 
-            else if(check !== Johndoez && check !== Doughestofthejohns){
+            else if (fuse !== "" && fpass !== ""){
                 alert("Incorrect username and/or password.");
             }
-            
         }
+            
+        
 
     function checklog() {
         let boxlog = document.getElementById("TaC").checked; 
